@@ -64,8 +64,16 @@ const renderBoard = ()=>{
             });
             boardElement.appendChild(squareElement);
         });
+    
+
     });
 
+    if(playerRole === 'b'){
+        boardElement.classList.add("flipped");
+    }
+    else{
+        boardElement.classList.remove("flipped");
+    }
 }
 
 const handleMove = (source, target)=>{
